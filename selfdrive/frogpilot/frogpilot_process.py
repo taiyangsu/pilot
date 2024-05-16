@@ -21,6 +21,13 @@ from openpilot.selfdrive.frogpilot.controls.lib.theme_manager import ThemeManage
 
 WIFI = log.DeviceState.NetworkType.wifi
 
+def github_pinged(url="https://github.com", timeout=5):
+  try:
+    urllib.request.urlopen(url, timeout=timeout)
+    return True
+  except (urllib.error.URLError, socket.timeout, http.client.RemoteDisconnected):
+    return False
+
 def automatic_update_check(params):
   update_available = params.get_bool("UpdaterFetchAvailable")
   update_ready = params.get_bool("UpdateAvailable")
@@ -32,13 +39,6 @@ def automatic_update_check(params):
     os.system("pkill -SIGHUP -f selfdrive.updated.updated")
   elif update_state == "idle":
     os.system("pkill -SIGUSR1 -f selfdrive.updated.updated")
-
-def github_pinged(url="https://github.com", timeout=5):
-  try:
-    urllib.request.urlopen(url, timeout=timeout)
-    return True
-  except (urllib.error.URLError, socket.timeout, http.client.RemoteDisconnected):
-    return False
 
 def time_checks(automatic_updates, deviceState, params):
   if github_pinged():
@@ -89,7 +89,7 @@ def frogpilot_thread():
                                   sm['liveLocationKalman'], sm['modelV2'], sm['radarState'])
         frogpilot_planner.publish(sm, pm)
 
-    if params_memory.get("ModelToDownload", encoding='utf-8') is not None and github_pinged():
+    if params_memory.get("ModelToDownload", encoding='utf-8') is not None:
       download_model()
 
     if params_memory.get_bool("FrogPilotTogglesUpdated"):

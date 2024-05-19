@@ -75,7 +75,6 @@ else
   BRANCH_SUNNYPILOT=("-" "dev-c3" "release-c3")
   BRANCH_DRAGONPILOT=("-" "beta3" "d3")
   BRANCH_FROGPILOT=("-" "FrogPilot" "FrogPilot-old")
-  BRANCH_OPENPILOTCN=("-")
 fi
 
 # fork_select

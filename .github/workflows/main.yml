@@ -55,6 +55,6 @@ jobs:
         
     - name: Fetch and merge master
       run: |
-        git fetch master
+        git fetch openpilot
         git checkout -B master commaai/openpilot
         git push origin master --force

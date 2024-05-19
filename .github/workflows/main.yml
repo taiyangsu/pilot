@@ -53,8 +53,8 @@ jobs:
         git checkout -B d3 dragonpilot/d3
         git push origin d3 --force
         
-    - name: Fetch and merge master
+    - name: Fetch and merge master-ci
       run: |
         git fetch openpilot
-        git checkout -B master commaai/openpilot
-        git push origin master --force
+        git checkout -B master-ci commaai/openpilot
+        git push origin master-ci --force

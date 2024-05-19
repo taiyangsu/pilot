@@ -1,7 +1,6 @@
 
 ## Openpilot 一键安装脚本
 
-<h3 style="color:read;">本项目已终止维护，请点击了解<br> <a href="https://doc.sdut.me/cn/how_to_change_openpilot_fork_on_windows.html">使用 Putty SSH 切换 openpilot 分支版本</a>。</h3>
 
 ### 使用教程
 

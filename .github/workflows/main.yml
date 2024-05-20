@@ -26,6 +26,7 @@ jobs:
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
+        git remote add apilot https://github.com/ajouatom/apilot.git
         
         
     - name: Fetch and merge FrogPilot-Old
@@ -33,6 +34,7 @@ jobs:
         git fetch frogpilot
         git checkout -B FrogPilot-Old frogpilot/FrogPilot-Old
         git push origin FrogPilot-Old --force
+      
 
     - name: Fetch and merge FrogPilot
       run: |
@@ -51,5 +53,11 @@ jobs:
         git fetch dragonpilot
         git checkout -B d3 dragonpilot/d3
         git push origin d3 --force
+
+      - name: Fetch and merge C3-master
+      run: |
+        git fetch apilot
+        git checkout -B C3-master  apilot/C3-master
+        git push origin C3-master --force
         
 

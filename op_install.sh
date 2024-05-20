@@ -59,24 +59,6 @@ CQUESTION="$CMAGENTA"
 CWARNING="$CYELLOW"
 CMSG="$CCYAN"
 
-
-VERSION_NEOS=`cat /VERSION`
-VERSION_PY=`python --version`
-if [[ "${VERSION_NEOS}" -eq "12" ]]; then
-  echo -e "\n${CWARNING}当前系统为：NEOS ${VERSION_NEOS}（${VERSION_PY}）${CEND}"
-  FORKS=("-" "sunnypilot" "dragonpilot" "forgpilot")
-  BRANCH_SUNNYPILOT=("-" "dev-c3" "release-c3")
-  BRANCH_DRAGONPILOT=("-" "beta3" "d3")
-  BRANCH_FROGPILOT=("-" "FrogPilot" "FrogPilot-old")
-
-else
-  echo -e "\n${CWARNING}当前系统为：NEOS ${VERSION_NEOS}（${VERSION_PY}）${CEND}"
-  FORKS=("-" "sunnypilot" "dragonpilot" "forgpilot")
-  BRANCH_SUNNYPILOT=("-" "dev-c3" "release-c3")
-  BRANCH_DRAGONPILOT=("-" "beta3" "d3")
-  BRANCH_FROGPILOT=("-" "FrogPilot" "FrogPilot-old")
-fi
-
 # fork_select
 while :; do echo
   echo -e 'Fork 选择:'

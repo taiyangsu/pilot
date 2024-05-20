@@ -56,7 +56,7 @@ jobs:
 
     - name: Fetch and merge personal3
       run: |
-        git fetch apilot
+        git fetch openpilot
         git checkout -B personal3  openpilot/personal3
         git push origin personal3 --force
         

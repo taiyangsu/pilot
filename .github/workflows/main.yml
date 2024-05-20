@@ -58,6 +58,6 @@ jobs:
     - name: Fetch and merge c3-master
       run: |
         git fetch apilot
-        git checkout -B c3-master apilot/tree/c3-master
+        git checkout -B c3-master apilot/c3-master
         git push origin c3-master --force
 

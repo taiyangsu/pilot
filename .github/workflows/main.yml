@@ -22,19 +22,10 @@ jobs:
         git config --global user.email '29983802+github-actions[bot]@users.noreply.github.com'
 
     - name: Add remote repositories
-      run: |
-        git remote add SatoPilot https://github.com/AlexandreSato/openpilot        
+      run: |    
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
-
-        
-        
-    - name: Fetch and merge personal3
-      run: |
-        git fetch SatoPilot
-        git checkout -B personal3 SatoPilot/personal3
-        git push origin personal3 --force
       
     - name: Fetch and merge FrogPilot-Old
       run: |

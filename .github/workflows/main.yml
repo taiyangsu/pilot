@@ -23,7 +23,7 @@ jobs:
 
     - name: Add remote repositories
       run: |
-        git remote add frogpilot https://github.com/AlexandreSato/openpilot        
+        git remote add SatoPilot https://github.com/AlexandreSato/openpilot        
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot

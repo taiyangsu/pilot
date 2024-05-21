@@ -32,7 +32,7 @@ jobs:
         
     - name: Fetch and merge personal3
       run: |
-        git fetch frogpilot
+        git fetch SatoPilot
         git checkout -B personal3 AlexandreSato/openpilot
         git push origin personal3 --force
       

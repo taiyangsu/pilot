@@ -23,10 +23,17 @@ jobs:
 
     - name: Add remote repositories
       run: |    
+        git remote add openpilot https://github.com/commaai/openpilot
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
       
+    - name: Fetch and merge commatwo-master
+      run: |
+        git fetch commatwo_master
+        git checkout -B commatwo_master commaai/openpilot
+        git push origin commatwo_master --force
+        
     - name: Fetch and merge FrogPilot-Old
       run: |
         git fetch frogpilot

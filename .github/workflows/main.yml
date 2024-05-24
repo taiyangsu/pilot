@@ -28,7 +28,7 @@ jobs:
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
       
-    - name: Fetch and merge commatwo-master
+    - name: Fetch and merge commatwo_master
       run: |
         git fetch commatwo_master
         git checkout -B commatwo_master commaai/openpilot

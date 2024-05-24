@@ -30,7 +30,7 @@ jobs:
       
     - name: Fetch and merge commatwo_master
       run: |
-        git fetch commatwo_master
+        git fetch openpilot
         git checkout -B commatwo_master commaai/openpilot
         git push origin commatwo_master --force
         

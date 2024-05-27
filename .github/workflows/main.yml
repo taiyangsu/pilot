@@ -28,11 +28,11 @@ jobs:
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
         
     
-    - name: Fetch and merge main
+    - name: Fetch and merge master
       run: |
         git fetch sunnypilot
-        git checkout -B main sunnypilot/main
-        git push origin main --force
+        git checkout -B master sunnypilot/master
+        git push origin master --force
         
     - name: Fetch and merge FrogPilot-Old
       run: |

@@ -23,10 +23,18 @@ jobs:
 
     - name: Add remote repositories
       run: |    
+        git remote add SatoPilot https://github.com/AlexandreSato/openpilot
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
         
+    - name: Fetch and merge SatoPilot
+      run: |
+        git fetch SatoPilot
+        git checkout -B SatoPilot AlexandreSato/openpilot
+        git push origin SatoPilot --force
+        
+
         
     - name: Fetch and merge FrogPilot-Old
       run: |

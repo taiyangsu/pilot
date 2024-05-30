@@ -37,7 +37,7 @@ jobs:
       run: |
         git fetch frogpilot
         git checkout -B FrogPilot frogpilot/FrogPilot
-        git push origin FrogPilot --force
+        git push origin FrogPilot
 
     - name: Fetch and merge dev-c3
       run: |

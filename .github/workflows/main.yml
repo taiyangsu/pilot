@@ -23,7 +23,7 @@ jobs:
 
     - name: Add remote repositories
       run: |    
-        git remote add SatoPilot https://github.com/AlexandreSato/openpilot/tree/
+        git remote add SatoPilot https://github.com/AlexandreSato/openpilot
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
@@ -31,7 +31,7 @@ jobs:
 
     - name: Fetch and merge personal3
       run: |
-        git fetch SatoPilot
+        git fetch AlexandreSato
         git checkout -B personal3 SatoPilot/personal3
         git push origin personal3 --force
         

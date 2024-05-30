@@ -26,8 +26,7 @@ jobs:
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
-       
-        
+               
     - name: Fetch and merge FrogPilot-69
       run: |
         git fetch frogpilot

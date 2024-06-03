@@ -22,44 +22,28 @@ jobs:
         git config --global user.email '29983802+github-actions[bot]@users.noreply.github.com'
 
     - name: Add remote repositories
-      run: |    
+      run: |
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
-        git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
-        git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
-      
+        git remote add sunnypilot https://github.com/sunnypilot/sunnypilot 
+        git remote add garrettpall https://github.com/garrettpall/openpilot
+        
+    - name: Fetch and merge frogpilot-mazda-cslc
+      run: |
+        git fetch garrettpall
+        git checkout -B frogpilot-mazda-cslc garrettpall/frogpilot-mazda-cslc
+        git push origin frogpilot-mazda-cslc --force
+        
+
     - name: Fetch and merge FrogPilot
       run: |
-        git fetch Frogpilot
+        git fetch frogpilot
         git checkout -B FrogPilot frogpilot/FrogPilot
         git push origin FrogPilot --force
-        
-    - name: Fetch and merge FrogPilot-69
-      run: |
-        git fetch Frogpilot
-        git checkout -B FrogPilot-69 frogpilot/FrogPilot-69
-        git push origin FrogPilot-69 --force
-        
-    - name: Fetch and merge release-c3
-      run: |
-        git fetch sunnypilot
-        git checkout -B release-c3 sunnypilot/release-c3
-        git push origin release-c3 --force
-        
-    - name: Fetch and merge translation-tests-prebuilt
-      run: |
-        git fetch sunnypilot
-        git checkout -B translation-tests-prebuilt sunnypilot/translation-tests-prebuilt
-        git push origin translation-tests-prebuilt --force
-        
+
     - name: Fetch and merge dev-c3
       run: |
         git fetch sunnypilot
         git checkout -B dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force
-        
-    - name: Fetch and merge d3
-      run: |
-        git fetch dragonpilot
-        git checkout -B d3 dragonpilot/d3
-        git push origin d3 --force
+ 
 

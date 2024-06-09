@@ -24,7 +24,7 @@ jobs:
       run: |
         git remote add garrettpall https://github.com/dragonpilot-community/dragonpilot
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
-        git remote add sunnypilot https://github.com/sunnypilot/sunnypilot 
+        git remote add sunnypilot https://github.com/sunnypilot/sunnypilot
 
         
     - name: Fetch and merge dragonpilot

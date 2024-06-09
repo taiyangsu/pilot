@@ -24,13 +24,13 @@ jobs:
       run: |
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot 
-        git remote add garrettpall https://github.com/garrettpall/openpilot
+        git remote add garrettpall https://github.com/dragonpilot-community/dragonpilot
         
-    - name: Fetch and merge frogpilot-mazda-cslc
+    - name: Fetch and merge dragonpilot
       run: |
-        git fetch garrettpall
-        git checkout -B frogpilot-mazda-cslc garrettpall/frogpilot-mazda-cslc
-        git push origin frogpilot-mazda-cslc --force
+        git fetch dragonpilot
+        git checkout -B d2 dragonpilot-community/dragonpilot
+        git push origin d2 --force
         
 
     - name: Fetch and merge FrogPilot
@@ -39,8 +39,8 @@ jobs:
         git checkout -B FrogPilot frogpilot/FrogPilot
         git push origin FrogPilot --force
 
-    - name: Fetch and merge staging-c3
+    - name: Fetch and merge dev-c3
       run: |
         git fetch sunnypilot
-        git checkout -B staging-c3 sunnypilot/staging-c3
-        git push origin staging-c3 --force
+        git checkout -B dev-c3 sunnypilot/dev-c3
+        git push origin dev-c3 --force

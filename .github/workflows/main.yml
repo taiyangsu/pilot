@@ -39,25 +39,25 @@ jobs:
         git checkout -B FrogPilot-69 frogpilot/FrogPilot-69
         git push origin FrogPilot-69 --force
 
-    - name: Fetch and merge sunnypilot
+    - name: Fetch and merge dev-c3
       run: |
         git fetch sunnypilot
         git checkout -B dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force
 
-    - name: Fetch and merge dragonpilot
+    - name: Fetch and merge d2
       run: |
         git fetch dragonpilot
         git checkout -B d2 dragonpilot/d2
         git push origin d2 --force
 
-    - name: Fetch and merge dragonpilot
+    - name: Fetch and merge 0.8.13
       run: |
         git fetch dragonpilot
         git checkout -B 0.8.13 dragonpilot/0.8.13
         git push origin 0.8.13 --force
 
-    - name: Fetch and merge dragonpilot
+    - name: Fetch and merge d3
       run: |
         git fetch dragonpilot
         git checkout -B d3 dragonpilot/d3

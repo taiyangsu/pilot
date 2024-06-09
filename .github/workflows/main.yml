@@ -19,6 +19,9 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email '29983802+github-actions[bot]@users.noreply.github.com'
+        git stash
+        git pull
+        git stash pop
 
     - name: Add remote repositories
       run: |

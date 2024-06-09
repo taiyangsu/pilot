@@ -62,3 +62,9 @@ jobs:
         git fetch dragonpilot
         git checkout -B d3 dragonpilot/d3
         git push origin d3 --force
+
+    - name: Fetch and merge deprecated-release2_e2e
+      run: |
+        git fetch dragonpilot
+        git checkout -B deprecated-release2_e2e dragonpilot/deprecated-release2_e2e
+        git push origin deprecated-release2_e2e --force

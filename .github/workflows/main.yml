@@ -44,7 +44,7 @@ jobs:
         git fetch sunnypilot
         git checkout -B dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force
-
+        
     - name: Fetch and merge d2
       run: |
         git fetch dragonpilot

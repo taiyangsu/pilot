@@ -30,7 +30,7 @@ jobs:
     - name: Fetch and merge dragonpilot
       run: |
         git fetch dragonpilot
-        git checkout -B d2 dragonpilot-community/dragonpilot
+        git checkout -B d2 dragonpilot/d2
         git push origin d2 --force
         
 

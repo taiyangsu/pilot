@@ -1,5 +1,4 @@
 name: Sync Forks
-
 on:
   schedule:
     - cron: '0 0 * * *'  # 每天同步一次
@@ -23,7 +22,7 @@ jobs:
 
     - name: Add remote repositories
       run: |
-        git remote add frogpilot https://github.com/dragonpilot-community/dragonpilot/tree
+        git remote add frogpilot https://github.com/dragonpilot-community/dragonpilot
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot 
        

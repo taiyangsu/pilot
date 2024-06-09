@@ -22,7 +22,7 @@ jobs:
 
     - name: Add remote repositories
       run: |
-        git remote add garrettpall https://github.com/dragonpilot-community/dragonpilot/tree
+        git remote add garrettpall https://github.com/dragonpilot-community/dragonpilot
         git remote add frogpilot https://github.com/FrogAi/FrogPilot
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot 
 
@@ -30,7 +30,7 @@ jobs:
     - name: Fetch and merge dragonpilot
       run: |
         git fetch dragonpilot
-        git checkout -B d2 dragonpilot-community/dragonpilot/tree
+        git checkout -B d2 dragonpilot-community/dragonpilot
         git push origin d2 --force
         
 

@@ -42,30 +42,29 @@ jobs:
     - name: Fetch and merge d2
       run: |
         git fetch dragonpilot
-        git checkout -B d2 dragonpilot/d2
-        git stash
+        git checkout -B -f d2 dragonpilot/d2  
         git push origin d2 --force
 
     - name: Fetch and merge 0.8.13
       run: |
         git fetch dragonpilot
-        git checkout -B 0.8.13 dragonpilot/0.8.13
+        git checkout -B -f 0.8.13 dragonpilot/0.8.13
         git push origin 0.8.13 --force
 
     - name: Fetch and merge d3
       run: |
         git fetch dragonpilot
-        git checkout -B d3 dragonpilot/d3
+        git checkout -B -f d3 dragonpilot/d3
         git push origin d3 --force
 
     - name: Fetch and merge deprecated-release2_e2e
       run: |
         git fetch dragonpilot
-        git checkout -B deprecated-release2_e2e dragonpilot/deprecated-release2_e2e
+        git checkout -B -f deprecated-release2_e2e dragonpilot/deprecated-release2_e2e
         git push origin deprecated-release2_e2e --force
 
     - name: Fetch and merge dev-c3
       run: |
         git fetch sunnypilot
-        git checkout -B dev-c3 sunnypilot/dev-c3
+        git checkout -B-f dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force

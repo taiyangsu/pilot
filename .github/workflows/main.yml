@@ -41,9 +41,11 @@ jobs:
         
     - name: Fetch and merge d2
       run: |
+        git stash
         git fetch dragonpilot
         git checkout -B d2 dragonpilot/d2
         git push origin d2 --force
+        git stash pop
    
 
     - name: Fetch and merge 0.8.13

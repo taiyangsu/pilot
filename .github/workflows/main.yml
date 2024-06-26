@@ -49,8 +49,14 @@ jobs:
         git checkout -B d2 dragonpilot/d2
         git push origin d2 --force
 
-    - name: Fetch and merge sunnypilot
-        
+    - name: Fetch and merge sunnypilot        
+      run: |
+       
+        git fetch sunnypilot
+        git checkout -B master sunnypilot/master
+        git push origin master --force
+
+    - name: Fetch and merge sunnypilot        
       run: |
        
         git fetch sunnypilot

@@ -36,8 +36,8 @@ jobs:
     - name: Fetch and merge dragonpilot
       run: |
         git fetch dragonpilot
-        git checkout -B deprecated-beta2 dragonpilot/deprecated-beta2
-        git push origin deprecated-beta2 --force
+        git checkout -B beta3 dragonpilot/beta3
+        git push origin beta3 --force
         
     - name: Fetch and merge dragonpilot
       run: |
@@ -53,8 +53,14 @@ jobs:
         git checkout -B dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force
     
-    - name: Fetch and merge openpilot
+    - name: Fetch and merge FrogPilot
       run: |
-        git fetch openpilot
-        git checkout -B commatwo_master openpilot/commatwo_master
-        git push origin commatwo_master --force
+        git fetch frogpilot
+        git checkout -B FrogPilot frogpilot/FrogPilot
+        git push origin FrogPilot --force
+    - name: Fetch and merge FrogPilot
+      run: |
+        git fetch frogpilot
+        git checkout -B FrogPilot-69 frogpilot/FrogPilot-69
+        git push origin FrogPilot-69 --force
+

@@ -63,4 +63,9 @@ jobs:
         git fetch frogpilot
         git checkout -B FrogPilot-69 frogpilot/FrogPilot-69
         git push origin FrogPilot-69 --force
-
+        
+    - name: Fetch and merge openpilot
+      run: |
+        git fetch openpilot
+        git checkout -B master openpilot/master
+        git push origin master --force

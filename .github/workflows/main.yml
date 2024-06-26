@@ -43,30 +43,30 @@ jobs:
 
      - name: Fetch and merge dragonpilot
       run: |
+        git stash
         git fetch dragonpilot
         git checkout -B beta3 dragonpilot/beta3
-        git checkout -- third_party/acados/larch64/lib/libqpOASES_e.so third_party/maplibre-native-qt/x86_64/lib/libQMapLibre.so
         git push origin beta3 --force
         
     - name: Fetch and merge dragonpilot
       run: |
+        git stash
         git fetch dragonpilot
         git checkout -B d2 dragonpilot/d2
-        checkout -- third_party/acados/larch64/lib/libqpOASES_e.so third_party/maplibre-native-qt/x86_64/lib/libQMapLibre.so
         git push origin d2 --force  
 
     - name: Fetch and merge sunnypilot
       run: |
+        git stash
         git fetch sunnypilot
         git checkout -B dev-c3 sunnypilot/dev-c3
-        checkout -- third_party/acados/larch64/lib/libqpOASES_e.so third_party/maplibre-native-qt/x86_64/lib/libQMapLibre.so
         git push origin dev-c3 --force
 
     - name: Fetch and merge openpilot
       run: |
+        git stash
         git fetch openpilot
         git checkout -B commatwo_master openpilot/commatwo_master
-        checkout -- third_party/acados/larch64/lib/libqpOASES_e.so third_party/maplibre-native-qt/x86_64/lib/libQMapLibre.so
         git push origin commatwo_master --force
 
 

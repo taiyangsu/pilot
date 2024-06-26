@@ -26,12 +26,9 @@ jobs:
         git config --global user.email '29983802+github-actions[bot]@users.noreply.github.com'
     - name: Add remote repositories
       run: |
-        git remote add frogpilot https://github.com/FrogAi/FrogPilot
-    
+        git remote add frogpilot https://github.com/FrogAi/FrogPilot    
         git remote add sunnypilot https://github.com/sunnypilot/sunnypilot.git
-
         git remote add dragonpilot https://github.com/dragonpilot-community/dragonpilot
-
         git remote add openpilot https://github.com/commaai/openpilot
         
        
@@ -46,14 +43,6 @@ jobs:
         git checkout -B FrogPilot-69 frogpilot/FrogPilot-69
         git push origin FrogPilot-69 --force
 
-    - name: Fetch and merge sunnypilot
-        
-      run: |
-       
-        git fetch sunnypilot
-        git stash
-        git checkout -B dev-c3 sunnypilot/dev-c3
-        git push origin dev-c3 --force
     - name: Fetch and merge dragonpilot
       run: |
         git fetch dragonpilot
@@ -65,6 +54,15 @@ jobs:
         git fetch dragonpilot
         git checkout -B d2 dragonpilot/d2
         git push origin d2 --force
+
+    - name: Fetch and merge sunnypilot
+        
+      run: |
+       
+        git fetch sunnypilot
+        git checkout -B dev-c3 sunnypilot/dev-c3
+        git push origin dev-c3 --force
+    
     - name: Fetch and merge openpilot
       run: |
         git fetch openpilot

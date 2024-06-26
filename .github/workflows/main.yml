@@ -42,28 +42,24 @@ jobs:
 
      - name: Fetch and merge dragonpilot
       run: |
-        git stash
         git fetch dragonpilot
         git checkout -B beta3 dragonpilot/beta3
         git push origin beta3 --force
         
     - name: Fetch and merge dragonpilot
       run: |
-        git stash
         git fetch dragonpilot
         git checkout -B d2 dragonpilot/d2
         git push origin d2 --force  
 
     - name: Fetch and merge sunnypilot
       run: |
-        git stash
         git fetch sunnypilot
         git checkout -B dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force
 
     - name: Fetch and merge openpilot
       run: |
-        git stash
         git fetch openpilot
         git checkout -B commatwo_master openpilot/commatwo_master
         git push origin commatwo_master --force

@@ -47,10 +47,11 @@ jobs:
         git push origin FrogPilot-69 --force
 
     - name: Fetch and merge sunnypilot
-        git stash
+        
       run: |
-        git fetch sunnypilot
        
+        git fetch sunnypilot
+        git stash
         git checkout -B dev-c3 sunnypilot/dev-c3
         git push origin dev-c3 --force
     - name: Fetch and merge dragonpilot
